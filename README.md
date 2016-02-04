@@ -34,6 +34,10 @@ Key Points :
 6. Component + Decorator
 
 #4 Factory Pattern (C)
+Variants :
+1. Simple Factory (commonly used static factory method) 
+2. 
 Key Points :
 1. Encapsulating object creation
-2. 
+2. Creator + Product
+3. 
