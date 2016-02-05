@@ -41,15 +41,15 @@ Key Points :
 #4. Factory Pattern (C)
 Variants :
 
-1. Simple Factory (commonly used static factory method, advantage is no need create object to access, disadvantage are can't subclass and change behavior) 
+A. Simple Factory (commonly used static factory method, advantage is no need create object to access, disadvantage are can't subclass and change behavior) 
 
 <img src="https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/Screen%20Shot%202016-02-05%20at%207.53.30%20AM.png" width="250">
 
-2. Factory (Through inheritance)
+B. Factory (Through inheritance)
 
 <img src="https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/Screen%20Shot%202016-02-05%20at%207.53.48%20AM.png" width="500">
 
-3. Abstract Factory (Through composition, Allows variety of Factories)
+C. Abstract Factory (Through composition, Allows variety of Factories)
 
 <img src="https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/Screen%20Shot%202016-02-05%20at%207.53.57%20AM.png" width="500">
 
