@@ -57,7 +57,7 @@ C. Abstract Factory (Through composition, Allows variety of Factories)
 Key Points :
 
 1. Encapsulating object creation, loosely coupling, decoupled creator from concrete classes
-2. Creator + Product
+2. Creator + Factory + Product
 3. Use static constant/enum to adhere type-safe
 4. DI Principle, depend upon abstractions, do not depend upon concrete classes
 5. Used when there is a class that likely to change
