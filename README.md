@@ -35,9 +35,22 @@ Key Points :
 
 #4 Factory Pattern (C)
 Variants :
-1. Simple Factory (commonly used static factory method) 
-2. 
+1. Simple Factory (commonly used static factory method, advantage is no need create object to access, disadvantage are can't subclass and change behavior) 
+2. Factory (Through inheritance)
+3. Abstract Factory (Through composition, Allows variety of Factories)
+
 Key Points :
-1. Encapsulating object creation
+1. Encapsulating object creation, loosely coupling, decoupled creator from concrete classes
 2. Creator + Product
-3. 
+3. Use static constant/enum to adhere type-safe
+4. DI Principle, depend upon abstractions, do not depend upon concrete classes
+5. Used when there is a class that likely to change
+
+
+
+
+
+
+
+
+Source : Book of Head First Design Patterns - O'Reilly
