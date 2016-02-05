@@ -1,4 +1,4 @@
-package pattern.design.factory;
+package pattern.design.factory.simplefactory.product;
 
 /**
  * Created by ykhdzr on 2/4/16.
@@ -6,22 +6,22 @@ package pattern.design.factory;
 public class Vixion extends Motorcycle {
 
     @Override
-    void prepare() {
+    public void prepare() {
         System.out.println("Preparing for Vixion");
     }
 
     @Override
-    void speed() {
+    public void speed() {
         System.out.println("Speed is 100");
     }
 
     @Override
-    void acceleration() {
+    public void acceleration() {
         System.out.println("Acceleration is 80");
     }
 
     @Override
-    void balance() {
+    public void balance() {
         System.out.println("Balance is 50");
     }
 }

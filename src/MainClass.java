@@ -1,11 +1,8 @@
-import pattern.design.decorator.*;
-import pattern.design.observer.HeavyFansImpl;
-import pattern.design.observer.SlowyFansImpl;
-import pattern.design.observer.SuperstarImpl;
-import pattern.design.strategy.ComingSoonEvent;
-import pattern.design.strategy.Event;
-import pattern.design.strategy.OnSaleEvent;
-import pattern.design.strategy.WithoutSchedule;
+import pattern.design.factory.abstractfactory.creator.AbstractMotorcycleFactory;
+import pattern.design.factory.abstractfactory.dealer.DealerBali;
+import pattern.design.factory.abstractfactory.dealer.DealerBekasi;
+import pattern.design.factory.simplefactory.creator.SimpleMotorcycleFactory;
+import pattern.design.factory.simplefactory.dealer.DealerJakarta;
 
 /**
  * Created by ykhdzr on 1/17/16.
@@ -14,7 +11,7 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        System.out.println("////////////////////////////////////////////////////////////////////////////////////");
+        /*System.out.println("////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("//////////// [B]Strategy Pattern (FAVOR COMPOSITION OVER INHERITANCE) //////////////");
         System.out.println("////////////////////////////////////////////////////////////////////////////////////");
         Event onSale = new OnSaleEvent();
@@ -87,6 +84,34 @@ public class MainClass {
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////// End Of Decorator Pattern ///////////////////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println();
+        System.out.println();
+        System.out.println();*/
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("////////////////////// [C]Factory Pattern (Dependency Inversion) //////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+
+        DealerJakarta dealerJakarta = new DealerJakarta();
+        System.out.println(dealerJakarta);
+        dealerJakarta.orderMotorcycle(SimpleMotorcycleFactory.NINJA250);
+        dealerJakarta.orderMotorcycle(SimpleMotorcycleFactory.VIXION);
+
+        DealerBali dealerBali = new DealerBali();
+        DealerBekasi dealerBekasi = new DealerBekasi();
+
+        System.out.println(dealerBali);
+        dealerBali.orderMotorcycle(AbstractMotorcycleFactory.NINJA250);
+        dealerBali.orderMotorcycle(AbstractMotorcycleFactory.VIXION);
+
+        System.out.println(dealerBekasi);
+        dealerBekasi.orderMotorcycle(AbstractMotorcycleFactory.NINJA250);
+        dealerBekasi.orderMotorcycle(AbstractMotorcycleFactory.VIXION);
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////////////////////// End Of Factory Pattern ///////////////////////////////////");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println();
         System.out.println();

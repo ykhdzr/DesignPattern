@@ -1,4 +1,8 @@
-package pattern.design.factory;
+package pattern.design.factory.simplefactory.creator;
+
+import pattern.design.factory.simplefactory.product.Motorcycle;
+import pattern.design.factory.simplefactory.product.Ninja250;
+import pattern.design.factory.simplefactory.product.Vixion;
 
 /**
  * Created by ykhdzr on 2/4/16.
