@@ -49,7 +49,7 @@ B. Factory (Through inheritance)
 
 <img src="https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/Screen%20Shot%202016-02-05%20at%207.53.48%20AM.png" width="500">
 
-C. Abstract Factory (Through composition, Allows variety of Factories)
+C. Abstract Factory (Through composition, creates family of product)
 
 <img src="https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/Screen%20Shot%202016-02-05%20at%207.53.57%20AM.png" width="500">
 
