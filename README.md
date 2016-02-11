@@ -62,6 +62,121 @@ Key Points :
 4. DI Principle, depend upon abstractions, do not depend upon concrete classes
 5. Used when there is a class that likely to change
 
+#5. Singleton Pattern (C)
+Variants :
+
+A. Lazy (non multithread)
+```java
+public class Singleton {
+
+  private static Singleton instance;
+
+  private Singleton() {
+    // The private constructor, ensures no one outside can directly create instance of this class
+  }
+
+  public static Singleton getInstance() {
+    // Here a single check not synchronized
+    if (instance == null) {
+      instance = new Singleton();
+    }
+
+    return instance;
+  }
+}
+```
+
+B. Lazy (Multithread/Thread-safe with Large scope Synchronization block)
+```java
+public class Singleton {
+
+  private static Singleton instance;
+
+  private Singleton() {
+    // The private constructor, ensures no one outside can directly create instance of this class
+  }
+
+  public static synchronized Singleton getInstance() {
+    // Here a single check but in a synchronized getInstance method
+    if (instance == null) {
+      instance = new Singleton();
+    }
+
+    return instance;
+  }
+}
+```
+C. Eager
+```java
+public class Singleton {
+
+  // Builds the instance variable once loaded the Singleton class
+  private static Singleton instance = new Singleton();
+
+  private Singleton() {
+    // The private constructor, ensures no one outside can directly create instance of this class
+  }
+
+  public static Singleton getInstance() {
+    // Returns the already build with an eager approach instance variable
+    return instance;
+
+  }
+
+}
+```
+
+C. Double-checked locking(Multithread/Thread-safe with Small scope Synchronization block)
+```java
+ublic class Singleton {
+
+  private volatile Singleton instance;
+
+  private Singleton() {
+    // The private constructor, ensures no one outside can directly create instance of this class
+  }
+
+  public static Singleton getInstance() {
+    // First check 
+    if (instance == null) {
+      synchronized(Singleton.class) {
+        // Second check inside a synchronized block
+        if (instance == null) {
+          instance = new Singleton();
+        }
+      }
+    }
+
+    return instance;
+  }
+}
+```
+
+D. Holder-class idiom(Multithread/Thread-safe without any Synchronization block)
+```java
+public class Singleton {
+
+    private Singleton() {
+        // The private constructor, ensures no one outside can directly create instance of this class
+    }
+
+    public static Singleton getInstance() {
+        return SingletonHolder.instance;
+    }
+
+    // Inner static class that holds a reference to the singleton
+    private static class SingletonHolder {
+        private static final Singleton instance = new Singleton();
+    }
+}
+```
+
+Key Points :
+
+1. Ensures a class has only ONE instance, and provides a global point of access to it
+2. Synchronized is method expensive, it can decrease performance by a factor of 100
+3. In multithread environment it is better to synchronize the smallest portion of code possible
+4. Prior to Java 1.2 Singleton would be collected and destroyed by GC, this was a confusing bugs because the next call to getInstance() produced a new Singleton again with new/reset values
 
 
 
