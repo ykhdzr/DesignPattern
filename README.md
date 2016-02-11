@@ -126,7 +126,7 @@ public class Singleton {
 }
 ```
 
-C. Double-checked locking(Multithread/Thread-safe with Small scope Synchronization block)
+D. Double-checked locking(Multithread/Thread-safe with Small scope Synchronization block)
 ```java
 ublic class Singleton {
 
@@ -152,7 +152,7 @@ ublic class Singleton {
 }
 ```
 
-D. Holder-class idiom(Multithread/Thread-safe without any Synchronization block)
+E. Holder-class idiom(Multithread/Thread-safe without any Synchronization block)
 ```java
 public class Singleton {
 
