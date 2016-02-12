@@ -128,7 +128,7 @@ public class Singleton {
 
 D. Double-checked locking(Multithread/Thread-safe with Small scope Synchronization block)
 ```java
-ublic class Singleton {
+public class Singleton {
 
   private volatile Singleton instance;
 
