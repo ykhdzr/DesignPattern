@@ -1,8 +1,11 @@
-import pattern.design.factory.abstractfactory.creator.AbstractMotorcycleFactory;
-import pattern.design.factory.abstractfactory.dealer.DealerBali;
-import pattern.design.factory.abstractfactory.dealer.DealerBekasi;
-import pattern.design.factory.simplefactory.creator.SimpleMotorcycleFactory;
-import pattern.design.factory.simplefactory.dealer.DealerJakarta;
+import pattern.design.factory.abstractfactory.creator.DealerAmerika;
+import pattern.design.factory.abstractfactory.creator.DealerEropa;
+import pattern.design.factory.abstractfactory.sparepart.OffRoadSparepart;
+import pattern.design.factory.abstractfactory.sparepart.OnRoadSparepart;
+import pattern.design.factory.factory.creator.DealerBali;
+import pattern.design.factory.factory.creator.DealerBekasi;
+import pattern.design.factory.factory.factory.AbstractMotorcycleFactory;
+import pattern.design.factory.simplefactory.creator.DealerJakarta;
 
 /**
  * Created by ykhdzr on 1/17/16.
@@ -93,11 +96,13 @@ public class MainClass {
         System.out.println("////////////////////// [C]Factory Pattern (Dependency Inversion) //////////////////////");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
 
+        // Simple Factory
         DealerJakarta dealerJakarta = new DealerJakarta();
         System.out.println(dealerJakarta);
-        dealerJakarta.orderMotorcycle(SimpleMotorcycleFactory.NINJA250);
-        dealerJakarta.orderMotorcycle(SimpleMotorcycleFactory.VIXION);
+        dealerJakarta.orderMotorcycle("Vixion");
+        dealerJakarta.orderMotorcycle("Ninja250");
 
+        // Factory
         DealerBali dealerBali = new DealerBali();
         DealerBekasi dealerBekasi = new DealerBekasi();
 
@@ -109,6 +114,18 @@ public class MainClass {
         dealerBekasi.orderMotorcycle(AbstractMotorcycleFactory.NINJA250);
         dealerBekasi.orderMotorcycle(AbstractMotorcycleFactory.VIXION);
 
+
+        // Abstract Factory
+        DealerEropa dealerEropa = new DealerEropa();
+        DealerAmerika dealerAmerika = new DealerAmerika();
+
+        System.out.println(dealerEropa);
+        dealerEropa.orderMotorcycle(pattern.design.factory.abstractfactory.factory.AbstractMotorcycleFactory.NINJA250, new OffRoadSparepart());
+        dealerEropa.orderMotorcycle(pattern.design.factory.abstractfactory.factory.AbstractMotorcycleFactory.VIXION, new OffRoadSparepart());
+
+        System.out.println(dealerAmerika);
+        dealerAmerika.orderMotorcycle(AbstractMotorcycleFactory.NINJA250, new OnRoadSparepart());
+        dealerAmerika.orderMotorcycle(AbstractMotorcycleFactory.VIXION, new OnRoadSparepart());
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////// End Of Factory Pattern ///////////////////////////////////");
