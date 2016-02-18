@@ -186,6 +186,7 @@ Key Points :
 3. Encapsulate method invocation
 4. Encapsulate a request by binding together a set of ACTIONS on a specific RECEIVER
 5. Decouple requester of an action from object that ACTUALLY perform the action
+6. COMMAND + INVOKER + RECEIVER
 
 
 
