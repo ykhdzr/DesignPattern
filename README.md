@@ -178,8 +178,14 @@ Key Points :
 3. In multithread environment it is better to synchronize the smallest portion of code possible
 4. Prior to Java 1.2 Singleton would be collected and destroyed by GC, this was a confusing bugs because the next call to getInstance() produced a new Singleton again with new/reset values
 
+#6. Command Pattern (B)
+Key Points :
 
-
+1. Program to an Interface(as general), not an Implementation
+2. Favor Composition over Inheritance
+3. Encapsulate method invocation
+4. Encapsulate a request by binding together a set of ACTIONS on a specific RECEIVER
+5. Decouple requester of an action from object that ACTUALLY perform the action
 
 
 
