@@ -1,3 +1,7 @@
+import pattern.design.command.commands.*;
+import pattern.design.command.invoker.GoController;
+import pattern.design.command.receiver.GoFood;
+import pattern.design.command.receiver.GoRide;
 import pattern.design.factory.abstractfactory.creator.DealerAmerika;
 import pattern.design.factory.abstractfactory.creator.DealerEropa;
 import pattern.design.factory.abstractfactory.sparepart.OffRoadSparepart;
@@ -129,6 +133,39 @@ public class MainClass {
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////// End Of Factory Pattern ///////////////////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("////////////////////// [B]Command Pattern (Encapsulate method invocation) ////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+
+        // Simple Factory
+        GoFood goFood = new GoFood();
+        GoFoodOrderCommand goFoodOrderCommand = new GoFoodOrderCommand(goFood);
+        GoFoodCancelCommand goFoodCancelCommand = new GoFoodCancelCommand(goFood);
+
+        GoRide goRide = new GoRide();
+        GoRideOrderCommand goRideOrderCommand = new GoRideOrderCommand(goRide);
+        GoRideCancelCommand goRideCancelCommand = new GoRideCancelCommand(goRide);
+
+        GoController goController = new GoController();
+        goController.placeOrder(goFoodOrderCommand);
+        goController.placeOrder(goRideOrderCommand);
+        goController.placeOrder(goRideCancelCommand);
+        goController.placeOrder(goFoodCancelCommand);
+
+        System.out.println("------- My History of using GoJerk services ---------");
+        for (GoCommand goCommand : goController.getHistory()) {
+            System.out.println(goCommand.toString());
+        }
+        System.out.println("-----------------------------------------------------");
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////////////////////// End Of Command Pattern /////////////////////////////////////");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println();
         System.out.println();
