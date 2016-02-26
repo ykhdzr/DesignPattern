@@ -188,6 +188,47 @@ Key Points :
 5. Decouple requester of an action from object that ACTUALLY perform the action
 6. COMMAND + INVOKER + RECEIVER
 
+#7. Adapter Pattern (S)
+Key Points :
+
+1. Convert interfaces to another
+2. Wrapped objects to make their interfaces look like something THEY ARE NOT
+2. TARGET + ADAPTER + ADAPTEE
+3. Wrapping 1ONE ADAPTEE
+4. Can do 2TWO-WAY Adapter, just implement old interface and new interface coincide
+5. Class adapter, use sublass to adapting Adaptee
+6. Object adapter, use object composition to adapting Adaptee
+7. Real world case, adapting ENUMERATION TO ITERATOR, in other words adapting `hashMoreElements()`,`nextElement()` to `hashNext()`, `next()`, `remove`
+```
+
+public class EnumerationToIterator implements Iterator {
+	Enumeration enum;
+
+	public EnumerationToIterator(Enumeration enum){
+		this.enum = enum;
+	}
+
+	public boolean hasNext(){
+		enum.hashMoreElements();
+	}
+
+	public boolean next(){
+		enum.nextElement();
+	}
+
+	public void remove(){
+		throw new UnsupportedOperationException();
+	}
+}
+```
+
+#8. Facade Pattern (S)
+Key Points :
+
+1. Make an interface simpler
+2. Hides complexity of large interfaces communication
+3. Wrapping 1ONE-to-more ADAPTEE
+3. Encapsulate susbystem classes
 
 
 
