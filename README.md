@@ -199,7 +199,7 @@ Key Points :
 5. Class adapter, use sublass to adapting Adaptee
 6. Object adapter, use object composition to adapting Adaptee
 7. Real world case, adapting ENUMERATION-TO-ITERATOR, in other words adapting `hashMoreElements()`,`nextElement()`-TO-`hashNext()`, `next()`, `remove`
-```
+```java
 
 public class EnumerationToIterator implements Iterator {
 	Enumeration enum;
