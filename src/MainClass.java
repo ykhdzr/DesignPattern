@@ -1,15 +1,9 @@
-import pattern.design.command.commands.*;
-import pattern.design.command.invoker.GoController;
-import pattern.design.command.receiver.GoFood;
-import pattern.design.command.receiver.GoRide;
-import pattern.design.factory.abstractfactory.creator.DealerAmerika;
-import pattern.design.factory.abstractfactory.creator.DealerEropa;
-import pattern.design.factory.abstractfactory.sparepart.OffRoadSparepart;
-import pattern.design.factory.abstractfactory.sparepart.OnRoadSparepart;
-import pattern.design.factory.factory.creator.DealerBali;
-import pattern.design.factory.factory.creator.DealerBekasi;
-import pattern.design.factory.factory.factory.AbstractMotorcycleFactory;
-import pattern.design.factory.simplefactory.creator.DealerJakarta;
+import pattern.design.adapter.SysOut;
+import pattern.design.adapter.SysOutToAndroidLogger;
+import pattern.design.facade.ProjectSetupFacade;
+import pattern.design.facade.subsystem.FabricSetup;
+import pattern.design.facade.subsystem.GitSetup;
+import pattern.design.facade.subsystem.JenkinsSetup;
 
 /**
  * Created by ykhdzr on 1/17/16.
@@ -94,7 +88,7 @@ public class MainClass {
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println();
         System.out.println();
-        System.out.println();*/
+        System.out.println();
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("////////////////////// [C]Factory Pattern (Dependency Inversion) //////////////////////");
@@ -139,6 +133,7 @@ public class MainClass {
         System.out.println();
 
 
+
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("////////////////////// [B]Command Pattern (Encapsulate method invocation) ////////////////");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
@@ -166,6 +161,57 @@ public class MainClass {
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////// End Of Command Pattern /////////////////////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+*/
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("////////////////////// [B]Adapter Pattern (Convert interface to another) //////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+
+        System.out.println("---JAVA Print Out---");
+        SysOut sysOut = new SysOut();
+        sysOut.printOut();
+        System.out.println();
+        System.out.println();
+
+        System.out.println("---Convert JAVA Print Out TO ANDROID Logger---");
+        SysOutToAndroidLogger sysoutToAndroidLogger = new SysOutToAndroidLogger(sysOut);
+        sysoutToAndroidLogger.logD();
+        sysoutToAndroidLogger.logI();
+        sysoutToAndroidLogger.logE();
+        sysoutToAndroidLogger.logV();
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////////////////////// End Of Adapter Pattern /////////////////////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("////////////////////// [B]Facade Pattern (Encapsulate subsystem classes) //////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+
+        FabricSetup fabricSetup = new FabricSetup();
+        GitSetup gitSetup = new GitSetup();
+        JenkinsSetup jenkinsSetup = new JenkinsSetup();
+
+        ProjectSetupFacade projectSetupFacade = new ProjectSetupFacade(fabricSetup, gitSetup, jenkinsSetup);
+        System.out.println("---Project Up---");
+        projectSetupFacade.projectUp();
+        System.out.println();
+
+        System.out.println("---Project Shutdown---");
+        projectSetupFacade.projectShutdown();
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////////////////////// End Of Facade Pattern //////////////////////////////////////");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println();
         System.out.println();
