@@ -240,6 +240,7 @@ Key Points :
 3. Keeping the step of alghoritm in one place
 3. Hook method used when part of alghoritm is optional
 4. Adhere Hollywood Principle, subclasses never called the abstract class method directly without being CALLED first
+5. Somehow often consider as the same as Strategy, but NOT really, Strategy *define family of alghoritm and make them interchangeable through object composition*, while Template method *define the outline of alghoritm* 
 
 
 
