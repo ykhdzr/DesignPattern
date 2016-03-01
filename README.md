@@ -11,6 +11,7 @@ Design patterns learning result
 # Wise words :
 1. Design Pattern doesn't go directly into your code, they first go into your BRAIN
 2. Knowing A.P.I.E. doesn't make you a good OO designer
+3. Code duplication is good sign to clean up
 
 
 #1. Strategy Pattern (B)
@@ -229,6 +230,16 @@ Key Points :
 2. Hides complexity of large interfaces communication
 3. Wrapping 1ONE-to-more ADAPTEE
 3. Encapsulate susbystem classes
+4. 
+
+#9. Template method Pattern (B)
+Key Points :
+
+1. Defines step of alghoritm, allow subclasses handle one-or-more steps
+2. Fisrt step is to generalize the algorithma step
+3. Keeping the step of alghoritm in one place
+3. Hook method used when part of alghoritm is optional
+4. Adhere Hollywood Principle, subclasses never called the abstract class method directly without being CALLED first
 
 
 
