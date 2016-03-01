@@ -236,7 +236,7 @@ Key Points :
 Key Points :
 
 1. Defines step of alghoritm, allow subclasses handle one-or-more steps
-2. Fisrt step is to generalize the algorithma step
+2. First step is to generalize the algorithm step
 3. Keeping the step of alghoritm in one place
 3. Hook method used when part of alghoritm is optional
 4. Adhere Hollywood Principle, subclasses never called the abstract class method directly without being CALLED first
