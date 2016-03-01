@@ -1,9 +1,5 @@
-import pattern.design.adapter.SysOut;
-import pattern.design.adapter.SysOutToAndroidLogger;
-import pattern.design.facade.ProjectSetupFacade;
-import pattern.design.facade.subsystem.FabricSetup;
-import pattern.design.facade.subsystem.GitSetup;
-import pattern.design.facade.subsystem.JenkinsSetup;
+import pattern.design.template.HomeScreen;
+import pattern.design.template.LoginScreen;
 
 /**
  * Created by ykhdzr on 1/17/16.
@@ -33,7 +29,7 @@ public class MainClass {
 
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////");
-        System.out.println("////////////////////// [B]Observer Pattern (Holywood Principle) //////////////////////");
+        System.out.println("////////////////////// [B]Observer Pattern (Hollywood Principle) //////////////////////");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////");
         SuperstarImpl superstar = new SuperstarImpl("Yoko-Yo", "he");
 
@@ -165,7 +161,7 @@ public class MainClass {
         System.out.println();
         System.out.println();
         System.out.println();
-*/
+
 
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
@@ -212,6 +208,27 @@ public class MainClass {
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////// End Of Facade Pattern //////////////////////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+*/
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("////////////////////// [S]Template Method Pattern (Hollywood Principle) //////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+
+        LoginScreen loginScreen = new LoginScreen();
+        loginScreen.prepareScreen();
+
+        System.out.println();
+        System.out.println();
+
+        HomeScreen homeScreen = new HomeScreen();
+        homeScreen.prepareScreen();
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////////////////////// End Of Template Method Pattern /////////////////////////////");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println();
         System.out.println();
