@@ -5,9 +5,9 @@ package pattern.design.adapter;
  */
 public class SysOutToAndroidLogger implements AndroidLogger {
 
-    SysOut sysout;
+    JavaPrintOut sysout;
 
-    public SysOutToAndroidLogger(SysOut sysout) {
+    public SysOutToAndroidLogger(JavaPrintOut sysout) {
         this.sysout = sysout;
     }
 
