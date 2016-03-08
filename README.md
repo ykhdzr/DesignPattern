@@ -242,6 +242,20 @@ Key Points :
 4. Adhere Hollywood Principle, subclasses never called the abstract class method directly without being CALLED first
 5. Somehow often consider as the same as Strategy, but NOT really, Strategy *define family of alghoritm and make them interchangeable through object composition*, while Template method *define the outline of alghoritm* 
 
+#10. Iterator Pattern (B)
+Key Points :
 
+1. Relies on an interface called Iterator
+2. Simplifies aggregate interface and implementation
+3. External Iterator, clients control iteration
+4. Internal Iterator, iteration controlled by Iterator itself
+
+#11. Composite Pattern (S)
+Key Points :
+
+1. Treat collections of objects uniformly
+2. Build structures of objects contains composite objects and leaf objects
+3. Ignore the differences between composite objects and leaf objects
+4. Implementing Null Iterator (Null Object Pattern) to leaf objects
 
 Source : Book of Head First Design Patterns - O'Reilly
