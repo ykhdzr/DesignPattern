@@ -229,8 +229,7 @@ Key Points :
 1. Make an interface simpler
 2. Hides complexity of large interfaces communication
 3. Wrapping 1ONE-to-more ADAPTEE
-3. Encapsulate susbystem classes
-4. 
+4. Encapsulate susbystem classes
 
 #9. Template method Pattern (B)
 Key Points :
@@ -238,9 +237,9 @@ Key Points :
 1. Defines step of alghoritm, allow subclasses handle one-or-more steps
 2. First step is to generalize the algorithm step
 3. Keeping the step of alghoritm in one place
-3. Hook method used when part of alghoritm is optional
-4. Adhere Hollywood Principle, subclasses never called the abstract class method directly without being CALLED first
-5. Somehow often consider as the same as Strategy, but NOT really, Strategy *define family of alghoritm and make them interchangeable through object composition*, while Template method *define the outline of alghoritm* 
+4. Hook method used when part of alghoritm is optional
+5. Adhere Hollywood Principle, subclasses never called the abstract class method directly without being CALLED first
+6. Somehow often consider as the same as Strategy, but NOT really, Strategy *define family of alghoritm and make them interchangeable through object composition*, while Template method *define the outline of alghoritm* 
 
 #10. Iterator Pattern (B)
 Key Points :
