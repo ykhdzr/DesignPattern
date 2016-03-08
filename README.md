@@ -250,6 +250,8 @@ Key Points :
 3. External Iterator, clients control iteration
 4. Internal Iterator, iteration controlled by Iterator itself
 
+<img src="https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/Iterator.png" width="500">
+
 #11. Composite Pattern (S)
 Key Points :
 
@@ -257,5 +259,9 @@ Key Points :
 2. Build structures of objects contains composite objects and leaf objects
 3. Ignore the differences between composite objects and leaf objects
 4. Implementing Null Iterator (Null Object Pattern) to leaf objects
+
+<img src="https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/Composite.png" width="500">
+
+<img src="https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/composite2.png" width="500">
 
 Source : Book of Head First Design Patterns - O'Reilly
