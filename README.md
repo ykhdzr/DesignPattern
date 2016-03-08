@@ -255,7 +255,7 @@ Key Points :
 Key Points :
 
 1. Treat collections of objects uniformly
-2. Build structures of objects contains composite objects and leaf objects
+2. Build structures of objects contains COMPOSITE objects and LEAF objects
 3. Ignore the differences between composite objects and leaf objects
 4. Implementing Null Iterator (Null Object Pattern) to leaf objects
 
