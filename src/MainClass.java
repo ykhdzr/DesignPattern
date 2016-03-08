@@ -1,8 +1,21 @@
-import pattern.design.template.HomeScreen;
-import pattern.design.template.LoginScreen;
+import pattern.design.composite.Employee;
+import pattern.design.composite.EmployeeComponent;
+import pattern.design.composite.EmployeeManager;
+import pattern.design.composite.HRD;
 
 /**
- * Created by ykhdzr on 1/17/16.
+ * Created by
+ * __      __          __
+ * /\ \    /\ \        /\ \
+ * __  __\ \ \/'\\ \ \___    \_\ \  ____    _ __
+ * /\ \/\ \\ \ , < \ \  _ `\  /'_` \/\_ ,`\ /\`'__\
+ * \ \ \_\ \\ \ \\`\\ \ \ \ \/\ \L\ \/_/  /_\ \ \/
+ * \/`____ \\ \_\ \_\ \_\ \_\ \___,_\/\____\\ \_\
+ * `/___/> \\/_/\/_/\/_/\/_/\/__,_ /\/____/ \/_/
+ * /\___/
+ * \/__/
+ * <p>
+ * on 1/17/16.
  */
 public class MainClass {
 
@@ -212,7 +225,7 @@ public class MainClass {
         System.out.println();
         System.out.println();
         System.out.println();
-*/
+
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("////////////////////// [S]Template Method Pattern (Hollywood Principle) //////////////////");
@@ -229,6 +242,68 @@ public class MainClass {
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////// End Of Template Method Pattern /////////////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////// [B]Iterator Pattern (Simplifies aggregate interface and implementation) ////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+
+        Engineer engineer = new Engineer();
+        Designer designer = new Designer();
+        QA qa = new QA();
+
+        HRD hrd = new HRD(engineer, designer, qa);
+        hrd.showEmployeeList2();
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("//////////////////////////// End Of Iterator Pattern /////////////////////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+*/
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////// [S]Composite Pattern (Treat collections of objects uniformly) //////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+
+        EmployeeComponent iceHouseStructure = new EmployeeManager("IceHouse Org Chart");
+        EmployeeComponent randiTeam = new EmployeeManager("Randi");
+        EmployeeComponent harisTeam = new EmployeeManager("Haris");
+        EmployeeComponent yokoTeam = new EmployeeManager("  Yoko");
+        EmployeeComponent edoTeam = new EmployeeManager("  Edo");
+
+        iceHouseStructure.add(randiTeam);
+        iceHouseStructure.add(harisTeam);
+
+        randiTeam.add(yokoTeam);
+        randiTeam.add(new Employee("  Yoseph"));
+        randiTeam.add(new Employee("  Wais"));
+        randiTeam.add(new Employee("  Sety"));
+
+        harisTeam.add(new Employee("  Amril"));
+        harisTeam.add(new Employee("  Budi"));
+        harisTeam.add(new Employee("  Winni"));
+        harisTeam.add(edoTeam);
+
+        edoTeam.add(new Employee("    Heri"));
+        edoTeam.add(new Employee("    Sinta"));
+
+        yokoTeam.add(new Employee("    Mexan"));
+        yokoTeam.add(new Employee("    Putri"));
+        yokoTeam.add(new Employee("    Nabil"));
+
+        HRD hrd = new HRD(iceHouseStructure);
+        hrd.displayOrganizationStructure();
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////////////////////// End Of Composite Pattern ///////////////////////////////////");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println();
         System.out.println();
