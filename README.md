@@ -27,12 +27,12 @@ Key Points :
 1. Publisher + Subscriber/Observer
 2. One-To-Many relationship, ONE Publisher MANY Subscriber/Observer
 3. Loosely coupling, Publisher don't care about concrete Subscriber/Observer, it will always notify any object that implements Subscriber/Observer interface
-4. Holywood Principle, Don't call us, we call you
+4. Hollywood Principle, Don't call us, we call you
 
 #3. Decorator Pattern (S)
 Key Points :
 
-1. Extention at runtime, rather than compile time
+1. Extension at runtime, rather than compile time
 2. O/C Principle, Class should be open for extension, but closed for modification
 3. Object Wrapper
 4. Using Inheritance to match Type, not to get Behaviour
@@ -197,7 +197,7 @@ Key Points :
 2. TARGET + ADAPTER + ADAPTEE
 3. Wrapping 1ONE ADAPTEE
 4. Can do 2TWO-WAY Adapter, just implement old interface and new interface coincide
-5. Class adapter, use sublass to adapting Adaptee
+5. Class adapter, use subclass to adapting Adaptee
 6. Object adapter, use object composition to adapting Adaptee
 7. Real world case, adapting ENUMERATION-TO-ITERATOR, in other words adapting `hashMoreElements()`,`nextElement()`-TO-`hashNext()`, `next()`, `remove`
 ```java
@@ -229,17 +229,17 @@ Key Points :
 1. Make an interface simpler
 2. Hides complexity of large interfaces communication
 3. Wrapping 1ONE-to-more ADAPTEE
-4. Encapsulate susbystem classes
+4. Encapsulate subsystem classes
 
 #9. Template method Pattern (B)
 Key Points :
 
-1. Defines step of alghoritm, allow subclasses handle one-or-more steps
+1. Defines step of algorithm, allow subclasses handle one-or-more steps
 2. First step is to generalize the algorithm step
-3. Keeping the step of alghoritm in one place
-4. Hook method used when part of alghoritm is optional
+3. Keeping the step of algorithm in one place
+4. Hook method used when part of algorithm is optional
 5. Adhere Hollywood Principle, subclasses never called the abstract class method directly without being CALLED first
-6. Somehow often consider as the same as Strategy, but NOT really, Strategy *define family of alghoritm and make them interchangeable through object composition*, while Template method *define the outline of alghoritm* 
+6. Somehow often consider as the same as Strategy, but NOT really, Strategy *define family of algorithm and make them interchangeable through object composition*, while Template method *define the outline of alghoritm*
 
 #10. Iterator Pattern (B)
 Key Points :
@@ -263,5 +263,15 @@ Key Points :
 <img src="https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/Composite.png" width="500">
 
 <img src="https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/composite2.png" width="500">
+
+#12. State Pattern (B)
+Key Points :
+
+1. Encapsulate state-based behaviour and delegate behaviour to current state
+2. Context + State + ConcreteState
+3. State Diagram = State + State Transition
+4. Localize behaviour, encapsulate what varies, favor composition
+5. Strategy -> Change behaviour by composing with different object
+6. State -> Change state object in Context to change its behaviour
 
 Source : Book of Head First Design Patterns - O'Reilly

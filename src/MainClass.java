@@ -2,6 +2,7 @@ import pattern.design.composite.Employee;
 import pattern.design.composite.EmployeeComponent;
 import pattern.design.composite.EmployeeManager;
 import pattern.design.composite.HRD;
+import pattern.design.state.ATMMachine;
 
 /**
  * Created by
@@ -266,7 +267,7 @@ public class MainClass {
         System.out.println();
         System.out.println();
         System.out.println();
-*/
+
 
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
@@ -304,6 +305,48 @@ public class MainClass {
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////// End Of Composite Pattern ///////////////////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+*/
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("//////////////// [B]State Pattern (Encapsulate state-based behaviour) ////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+
+        ATMMachine atmMachine = new ATMMachine(10000);
+
+        atmMachine.insertCard();
+        atmMachine.insertPin(1234);
+        atmMachine.requestCash(5000);
+        System.out.println();
+
+        atmMachine.insertCard();
+        atmMachine.insertPin(1111);
+        atmMachine.ejectCard();
+        System.out.println();
+
+        atmMachine.insertPin(1234);
+        atmMachine.requestCash(5000);
+        atmMachine.ejectCard();
+        System.out.println();
+
+        atmMachine.insertCard();
+        atmMachine.ejectCard();
+        System.out.println();
+
+        atmMachine.insertCard();
+        atmMachine.insertPin(1234);
+        atmMachine.requestCash(5000);
+        System.out.println();
+
+        atmMachine.insertCard();
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////////////////////////// End Of State Pattern ///////////////////////////////////");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println();
         System.out.println();
