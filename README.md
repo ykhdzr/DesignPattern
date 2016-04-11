@@ -12,6 +12,7 @@ Design patterns learning result
 1. Design Pattern doesn't go directly into your code, they first go into your BRAIN
 2. Knowing A.P.I.E. doesn't make you a good OO designer
 3. Code duplication is good sign to clean up
+4. It's a TOOLS not RULES
 
 
 #1. Strategy Pattern (B)
