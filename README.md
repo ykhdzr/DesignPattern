@@ -8,11 +8,12 @@ Design patterns learning result
 
 ![alt tag](https://github.com/yokoahadazaro/DesignPattern/blob/master/src/assets/images/Design%20Patterns.png)
 
-# Wise words :
+# Pinned words :
 1. Design Pattern doesn't go directly into your code, they first go into your BRAIN
 2. Knowing A.P.I.E. doesn't make you a good OO designer
 3. Code duplication is good sign to clean up
 4. It's a TOOLS not RULES
+5. A Pattern is a SOLUTION to a PROBLEM in a CONTEXT
 
 
 #1. Strategy Pattern (B)
