@@ -2,6 +2,8 @@ import pattern.design.composite.Employee;
 import pattern.design.composite.EmployeeComponent;
 import pattern.design.composite.EmployeeManager;
 import pattern.design.composite.HRD;
+import pattern.design.proxy.Image;
+import pattern.design.proxy.ProxyImage;
 import pattern.design.state.ATMMachine;
 
 /**
@@ -309,7 +311,7 @@ public class MainClass {
         System.out.println();
         System.out.println();
         System.out.println();
-*/
+
 
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
@@ -347,6 +349,29 @@ public class MainClass {
 
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println("///////////////////////////////// End Of State Pattern ///////////////////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        */
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("//////////// [S]Proxy Pattern (Control and Manage access to Real object) ////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+
+        Image image = new ProxyImage("test_10mb.jpg");
+
+        //image will be loaded from disk
+        image.display();
+        System.out.println("");
+
+        //image will not be loaded from disk
+        image.display();
+
+
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("///////////////////////////////// End Of Proxy Pattern ///////////////////////////////////");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println();
         System.out.println();
