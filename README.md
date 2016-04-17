@@ -276,4 +276,18 @@ Key Points :
 5. Strategy -> Change behaviour by composing with different object
 6. State -> Change state object in Context to change its behaviour
 
+#13. Proxy Pattern (S)
+Key Points :
+
+1. Control and Manage access to real object
+2. Provides a surrogate or placeholder for another object to control access to it
+3. Remote Proxy -> acts as a local representative for an object that live in different JVM
+4. Virtual Proxy -> acts as a representative for an object that maybe expensive to create/defers until it needed
+
+#14. Compound Pattern
+Key Points :
+
+1. Combines two or more patterns as a solution to solve recurring/general problem
+2. MVP/MVVM/MVC is a compound pattern in the real world
+
 Source : Book of Head First Design Patterns - O'Reilly
