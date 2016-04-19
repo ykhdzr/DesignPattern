@@ -1,4 +1,4 @@
-# DesignPattern
+# GoF Design Patterns
 Design patterns learning result
 
 # Design Patterns grouped into 3 based on its characteristics, namely :
